@@ -1,6 +1,12 @@
 'use strict';
 
-const keys = document.querySelectorAll('.key');
+window.addEventListener('keydown', function (e) {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  if (!'audio') return;
+  audio.play();
+});
+
+/* const keys = document.querySelectorAll('.key');
 
 function playSound(ev) {
   const audio = document.querySelector(`audio[data-key="${ev.keycode}"]`);
@@ -9,3 +15,4 @@ function playSound(ev) {
 }
 
 window.addEventListener('keydown', playSound);
+ */
