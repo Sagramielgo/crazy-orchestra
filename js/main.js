@@ -9,13 +9,8 @@ window.addEventListener('keydown', function (ev) {
   key.classList.add('playing');
 });
 
-/* const keys = document.querySelectorAll('.key');
-
-function playSound(ev) {
-  const audio = document.querySelector(`audio[data-key="${ev.keycode}"]`);
-
-  const key = document.querySelector(`key[data-key="${ev.keycode}"]`);
+function removeTransition(ev) {
+  console.log(ev);
 }
-
-window.addEventListener('keydown', playSound);
- */
+const keys = document.querySelectorAll('.keys');
+keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
