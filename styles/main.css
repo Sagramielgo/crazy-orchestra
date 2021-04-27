@@ -27,4 +27,11 @@ body {
   border: 2px solid blue;
   border-radius: 10px;
   background-color: white;
+  transition: all 0.1s;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: fuchsia;
+  box-shadow: 0 0 15px grey;
 }
