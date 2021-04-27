@@ -6,7 +6,9 @@
 }
 
 body {
-  background-color: pink;
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .keys {
