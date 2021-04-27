@@ -34,7 +34,9 @@ body {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.5);
   transition: all 0.1s;
-  /*  font-size: 24px; */
+}
+.key:hover {
+  background-color: orange;
 }
 @media all and (min-width: 768px) {
   .key {
@@ -45,7 +47,7 @@ body {
 .playing {
   transform: scale(1.1);
   border-color: orange;
-  box-shadow: 0 0 15px grey;
+  box-shadow: 0 0 15px orange;
 }
 
 .footer {
@@ -67,5 +69,5 @@ body {
   text-decoration: none;
 }
 .fa-paw {
-  color: orange;
+  color: rgb(255, 136, 0);
 }
