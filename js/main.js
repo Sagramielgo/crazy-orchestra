@@ -5,7 +5,11 @@ function playSound(ev) {
   const key = document.querySelector(`.key[data-key="${ev.keyCode}"]`);
   if (!'audio') return;
   audio.currentTime = 0;
-  audio.play();
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
   key.classList.add('playing');
 }
 
