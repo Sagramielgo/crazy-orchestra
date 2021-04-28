@@ -10,17 +10,17 @@ function playSound(ev) {
   } else {
     audio.pause();
   }
-  key.classList.add('playing');
+  key.classList.toggle('playing');
 }
 
 window.addEventListener('keydown', playSound);
 
-function removeTransition() {
+/* function removeTransition() {
   this.classList.remove('playing');
 }
 
 const keys = document.querySelectorAll('.key');
-keys.forEach((key) => key.addEventListener('transitionend', removeTransition));
+keys.forEach((key) => key.addEventListener('transitionend', removeTransition)); */
 
 const buttons = document.querySelectorAll('.key');
 
@@ -40,7 +40,7 @@ function handleClick(ev) {
       audio.pause(songToPlay);
     }
     /*  audio.play(songToPlay); */
-    key.classList.add('playing');
+    key.classList.toggle('playing');
   }
 }
 
