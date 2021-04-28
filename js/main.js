@@ -34,7 +34,12 @@ function handleClick(ev) {
       `.key[data-sound="${ev.target.dataset.sound}"]`
     );
     audio.currentTime = 0;
-    audio.play(songToPlay);
+    if (audio.paused) {
+      audio.play(songToPlay);
+    } else {
+      audio.pause(songToPlay);
+    }
+    /*  audio.play(songToPlay); */
     key.classList.add('playing');
   }
 }
