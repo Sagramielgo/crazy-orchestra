@@ -3,7 +3,7 @@
 function playSound(ev) {
   const audio = document.querySelector(`audio[data-key="${ev.keyCode}"]`);
   const key = document.querySelector(`.key[data-key="${ev.keyCode}"]`);
-  if (!'audio') return;
+  if (!audio) return;
   audio.currentTime = 0;
   if (audio.paused) {
     audio.play();
@@ -31,7 +31,7 @@ function handleClick(ev) {
       `audio[data-sound="${ev.target.dataset.sound}"]`
     );
     const key = document.querySelector(
-      `key[data-sound="${ev.target.dataset.sound}"]`
+      `.key[data-sound="${ev.target.dataset.sound}"]`
     );
     audio.currentTime = 0;
     audio.play(songToPlay);
