@@ -23,9 +23,9 @@ body {
 }
 
 .key {
-  width: 60px;
-  height: 60px;
-  margin: 20px;
+  width: 65px;
+  height: 65px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -35,20 +35,19 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   transition: all 0.1s;
   cursor: pointer;
+  font-size: 14px;
 }
-.key:hover {
+/* .key:hover {
   background-color: orange;
-}
-@media all and (min-width: 768px) {
-  .key {
-    width: 120px;
-    height: 120px;
-  }
+} */
+.sound {
+  font-size: 12px;
+  line-height: 12px;
 }
 .playing {
   transform: scale(1.1);
   background-color: orange;
-  box-shadow: 0 0 15px orange;
+  box-shadow: 0 0 15px grey;
 }
 
 .footer {
@@ -71,4 +70,11 @@ body {
 }
 .fa-paw {
   color: rgb(255, 136, 0);
+}
+@media all and (min-width: 768px) {
+  .key {
+    width: 120px;
+    height: 120px;
+    margin: 20px;
+  }
 }
