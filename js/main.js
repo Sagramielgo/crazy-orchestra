@@ -22,16 +22,16 @@ window.addEventListener('keydown', playSound);
 const keys = document.querySelectorAll('.key');
 keys.forEach((key) => key.addEventListener('transitionend', removeTransition)); */
 
-const buttons = document.querySelectorAll('.key');
+const buttonElement = document.querySelectorAll('.key');
 
 function handleClick(ev) {
-  if (ev.target.classList.contains('key')) {
-    let songToPlay = ev.target.dataset.sound;
+  if (ev.currentTarget.classList.contains('key')) {
+    let songToPlay = ev.currentTarget.dataset.sound;
     const audio = document.querySelector(
-      `audio[data-sound="${ev.target.dataset.sound}"]`
+      `audio[data-sound="${ev.currentTarget.dataset.sound}"]`
     );
     const key = document.querySelector(
-      `.key[data-sound="${ev.target.dataset.sound}"]`
+      `.key[data-sound="${ev.currentTarget.dataset.sound}"]`
     );
     audio.currentTime = 0;
     if (audio.paused) {
@@ -44,6 +44,6 @@ function handleClick(ev) {
   }
 }
 
-for (let index = 0; index < buttons.length; index++) {
-  buttons[index].addEventListener('click', handleClick);
+for (let index = 0; index < buttonElement.length; index++) {
+  buttonElement[index].addEventListener('click', handleClick);
 }
