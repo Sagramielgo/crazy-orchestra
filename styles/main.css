@@ -8,7 +8,10 @@
 body {
   width: 100%;
   height: 100vh;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url(../images/cover.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -17,23 +20,24 @@ body {
 .header {
   text-align: center;
   width: 100%;
-  height: 10vh;
-  padding: 30px 10px;
+  /*  height: 10vh; */
+  padding: 30px 0px;
   font-size: 16px;
 }
 
 .keys {
   width: 100%;
-  height: 85vh;
+  /*   height: 85vh; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 
 .key {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   margin: 5px;
   padding: 0 5px;
   display: flex;
@@ -56,13 +60,12 @@ body {
 
 .footer {
   width: 100%;
-  height: 5vh;
-  padding-bottom: 10px;
+  /* height: 5vh; */
+  /*  padding-bottom: 10px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  bottom: 0;
+  /*   bottom: 0; */
 }
 
 .copy {
@@ -77,13 +80,14 @@ body {
   color: rgb(255, 136, 0);
 }
 
-@media all and (min-width: 500px) {
+@media all and (min-width: 450px) {
   .title,
   .title2 {
     display: inline;
   }
   .header {
     padding-top: 10px;
+    font-size: 14px;
   }
 }
 @media all and (min-width: 768px) {
@@ -100,13 +104,10 @@ body {
 }
 @media all and (min-width: 1200px) {
   .key {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     margin: 20px;
     font-size: 16px;
     padding: 0 7px;
-  }
-  .header {
-    font-size: 22px;
   }
 }
