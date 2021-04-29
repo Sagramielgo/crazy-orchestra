@@ -14,15 +14,17 @@ body {
   background-attachment: fixed;
 }
 
-.title {
+.header {
   text-align: center;
-  height: 5vh;
-  padding-top: 10px;
-  font-size: 14px;
+  width: 100%;
+  height: 10vh;
+  padding: 30px 10px;
+  font-size: 16px;
 }
+
 .keys {
   width: 100%;
-  height: 90vh;
+  height: 85vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -74,12 +76,26 @@ body {
 .fa-paw {
   color: rgb(255, 136, 0);
 }
+
+@media all and (min-width: 600px) {
+  .title,
+  .title2 {
+    display: inline;
+  }
+  .header {
+    padding-top: 10px;
+  }
+}
 @media all and (min-width: 768px) {
   .key {
     width: 90px;
     height: 90px;
     margin: 15px;
     font-size: 14px;
+  }
+  .header {
+    padding-top: 30px;
+    font-size: 18px;
   }
 }
 @media all and (min-width: 1200px) {
@@ -89,5 +105,8 @@ body {
     margin: 20px;
     font-size: 16px;
     padding: 0 7px;
+  }
+  .header {
+    font-size: 24px;
   }
 }
