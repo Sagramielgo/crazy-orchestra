@@ -49,9 +49,13 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   transition: all 0.1s;
   cursor: pointer;
-  font-size: 10px;
+  font-size: 12px;
+  font-weight: bold;
 }
-
+.song {
+  font-size: 9px;
+  font-weight: normal;
+}
 .playing {
   transform: scale(1.1);
   background-color: orange;
@@ -89,15 +93,18 @@ body {
   }
 }
 @media all and (min-width: 768px) {
+  .header {
+    padding-top: 30px;
+    font-size: 18px;
+  }
   .key {
     width: 90px;
     height: 90px;
     margin: 15px;
     font-size: 14px;
   }
-  .header {
-    padding-top: 30px;
-    font-size: 18px;
+  .song {
+    font-size: 12px;
   }
 }
 @media all and (min-width: 1200px) {
@@ -107,5 +114,8 @@ body {
     margin: 20px;
     font-size: 16px;
     padding: 0 7px;
+  }
+  .song {
+    font-size: 14px;
   }
 }
