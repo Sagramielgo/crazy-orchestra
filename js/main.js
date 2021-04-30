@@ -41,6 +41,7 @@ function handleClick(ev) {
     }
     /*  audio.play(songToPlay); */
     key.classList.toggle('playing');
+    key.classList.remove('fa-play');
   }
 }
 

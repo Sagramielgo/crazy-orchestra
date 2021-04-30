@@ -57,7 +57,10 @@ body {
   background-color: orange;
   box-shadow: 0 0 15px grey;
 }
-
+/* .fa-play,
+.fa-stop {
+  display: none;
+} */
 .footer {
   width: 100%;
   /* height: 5vh; */
@@ -81,12 +84,7 @@ body {
 }
 
 @media all and (min-width: 450px) {
-  .title,
-  .title2 {
-    display: inline;
-  }
   .header {
-    padding-top: 10px;
     font-size: 14px;
   }
 }
